@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../static/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../static/css/responsive.css" />
+        <title>{{title}}</title>
+    </head>
+    <body class="p-3 m-5" style="background-color: #4495eb; " > 
+        <section class="p-5 m-5 bg-light m-auto " style="border-radius: 12px; height: 82vh;">
+            <div>
+                <div class="d-flex justify-content-between align-center">
+                    <h3 class="mb-5">Customer Management</h3>
+                    <div>
+                        <a class="btn btn-primary" href="{% url 'users:login' %}">Login</a>
+                        <a class="btn btn-danger" href="{% url 'users:signup' %}">Signup</a>
+                    </div>
+                </div>
+                <a class="pb-3" style="text-decoration: none;">Recent logins</a>
+                <div class="table-responsive-sm">
+                    <table class="table table-hover mt-3">
+                        <thead class="table-dark">
+                        <tr>
+                            <th scope="col">User</th>
+                            <th scope="col">Customer Name</th>
+                            <th scope="col">Date Of Birth</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Event</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for customer in customers %}
+                            <tr style="height: 50px;">
+                                <th scope="row">{{customer.id}}</th>
+                                <td>{{customer.full_name}}</td>
+                                <td>{{customer.date_of_birth}}</td>
+                                <td>{{customer.email}}</td>
+                                <td>{{customer.address}}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
